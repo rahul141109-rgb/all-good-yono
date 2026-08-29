@@ -25,7 +25,7 @@ const apps = [
   }
 {
   name: "Boss Rummy",
-  icon: "dummy04.jpg",
+  icon: "IMG_20260830_031013_336.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -33,7 +33,7 @@ const apps = [
 },
 {
   name: "Club Inr",
-  icon: "dummy05.jpg",
+  icon: "IMG_20260830_031059_832.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -41,7 +41,7 @@ const apps = [
 },
 {
   name: "Game Rummy,
-  icon: "dummy06.jpg",
+  icon: "IMG_20260830_031130_318.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -49,7 +49,7 @@ const apps = [
 },
 {
   name: "Gogo Rummy",
-  icon: "dummy07.jpg",
+  icon: "IMG_20260830_031206_950.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -57,7 +57,7 @@ const apps = [
 },
 {
   name: "Hi Rummy",
-  icon: "dummy08.jpg",
+  icon: "IMG_20260830_031223_353.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -65,7 +65,7 @@ const apps = [
 },
 {
   name: "Hindi 777",
-  icon: "dummy09.jpg",
+  icon: "IMG_20260830_031243_911.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -73,7 +73,7 @@ const apps = [
 },
 {
   name: "Ind Club",
-  icon: "dummy10.jpg",
+  icon: "IMG_20260830_031641_744.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -81,7 +81,7 @@ const apps = [
 },
 {
   name: "Ind Rummy",
-  icon: "dummy11.jpg",
+  icon: "IMG_20260830_031737_470.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -89,7 +89,7 @@ const apps = [
 },
 {
   name: "Ind Slots",
-  icon: "dummy12.jpg",
+  icon: "IMG_20260830_031830_615.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -97,7 +97,7 @@ const apps = [
 },
 {
   name: "Inr Rummy",
-  icon: "dummy13.jpg",
+  icon: "IMG_20260830_031915_811.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -105,7 +105,7 @@ const apps = [
 },
 {
   name: "Jaiho 777",
-  icon: "dummy14.jpg",
+  icon: "IMG_20260830_031954_869.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -113,7 +113,7 @@ const apps = [
 },
 {
   name: "Jaiho 91",
-  icon: "dummy15.jpg",
+  icon: "IMG_20260830_032042_527.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -121,7 +121,7 @@ const apps = [
 },
 {
   name: "Mahagames",
-  icon: "dummy16.jpg",
+  icon: "IMG_20260830_032111_616.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -129,7 +129,7 @@ const apps = [
 },
 {
   name: "Jaiho Spin",
-  icon: "dummy17.jpg",
+  icon: "IMG_20260830_032218_786.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -137,7 +137,7 @@ const apps = [
 },
 {
   name: "Spin Gold",
-  icon: "dummy18.jpg",
+  icon: "IMG_20260830_032603_224.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
