@@ -1,7 +1,7 @@
 const apps = [
   {
     name: "Spin Winner ",
-    icon: "images/app01.png",
+    icon: "IMG_20260830_015124_678.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
@@ -9,7 +9,7 @@ const apps = [
   },
   {
     name: "Bingo101",
-    icon: "images/app02.png",
+    icon: "IMG_20260830_015303_606.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
@@ -17,7 +17,7 @@ const apps = [
   },
   {
     name: "Joy Rummy",
-    icon: "images/app03.png",
+    icon: "IMG_20260830_015329_734.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
