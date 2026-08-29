@@ -22,7 +22,7 @@ const apps = [
     version: "1.0.0",
     description: "Useful Android application.",
     link: "https://www.joyrummyon.com/?code=J5K5FS3UR4F&t=1786171415"
-  }
+  },
 {
   name: "Boss Rummy",
   icon: "IMG_20260830_031013_336.jpg",
@@ -40,7 +40,7 @@ const apps = [
   link: "https://clubinrvip1.one/?code=9VCY4SZJVY8&t=1786125586"
 },
 {
-  name: "Game Rummy,
+  name: "Game Rummy",
   icon: "IMG_20260830_031130_318.jpg",
   rating: "4.5",
   version: "1.0.0",
