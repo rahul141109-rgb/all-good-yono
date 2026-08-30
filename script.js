@@ -145,7 +145,7 @@ const apps = [
 },
 {
   name: "Spin 101",
-  icon: "",
+  icon: "IMG_20260830_120148_708.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -153,7 +153,7 @@ const apps = [
 },
 {
   name: "Yono 777",
-  icon: "IMG_20260830_032648_545.jpg",
+  icon: "IMG_20260830_120511_306.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -177,7 +177,7 @@ const apps = [
 },
 {
   name: "Jaiho Win",
-  icon: "IMG_20260830_032954_593.jpg",
+  icon: "IMG_20260830_033033_099.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -185,7 +185,7 @@ const apps = [
 },
 {
   name: "Jaiho Slots",
-  icon: "IMG_20260830_033033_099.jpg",
+  icon: "IMG_20260830_032954_593.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
