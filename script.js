@@ -384,16 +384,16 @@ const apps = [
   link: "https://join789jackpots1.com/?code=J7Z1QAFF46V&t=1786182278"
 },
 {
-  name: "App 49",
-  icon: "IMG_20260830_040058_281.jpg",
+  name: "Rummy888",
+  icon: "IMG_20260830_111542_350.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
-  link: "https://example.com/app49"
+  link: "https://rummy888vip49.com/?code=7WTQGAC5PM7&t=1788068568"
 },
 {
   name: "Spin 777",
-  icon: "IMG_20260830_040126_197.jpg",
+  icon: "IMG_20260830_040058_281.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -401,7 +401,7 @@ const apps = [
 },
 {
   name: "777.Game",
-  icon: "dummy51.jpg",
+  icon: "IMG_20260830_040126_197.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
