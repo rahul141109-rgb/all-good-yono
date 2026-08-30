@@ -145,7 +145,7 @@ const apps = [
 },
 {
   name: "Spin 101",
-  icon: "dummy19.jpg",
+  icon: "IMG_20260830_032648_545.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -153,7 +153,7 @@ const apps = [
 },
 {
   name: "Yono 777",
-  icon: "dummy20.jpg",
+  icon: "IMG_20260830_032813_299.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -161,7 +161,7 @@ const apps = [
 },
 {
   name: "DhanWin",
-  icon: "dummy21.jpg",
+  icon: "IMG_20260830_032909_975.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -169,7 +169,7 @@ const apps = [
 },
 {
   name: "Love Rummy",
-  icon: "dummy22.jpg",
+  icon: "IMG_20260830_032954_593.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -177,7 +177,7 @@ const apps = [
 },
 {
   name: "Jaiho Win",
-  icon: "dummy23.jpg",
+  icon: "IMG_20260830_033033_099.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -185,7 +185,7 @@ const apps = [
 },
 {
   name: "Jaiho Slots",
-  icon: "dummy24.jpg",
+  icon: "IMG_20260830_033120_358.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -193,7 +193,7 @@ const apps = [
 },
 {
   name: "Max Rummy",
-  icon: "dummy25.jpg",
+  icon: "IMG_20260830_033158_592.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -201,7 +201,7 @@ const apps = [
 },
 {
   name: "MBM BET",
-  icon: "dummy26.jpg",
+  icon: "IMG_20260830_033250_232.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -209,7 +209,7 @@ const apps = [
 },
 {
   name: "Neta Vip",
-  icon: "dummy27.jpg",
+  icon: "IMG_20260830_033326_960.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -217,7 +217,7 @@ const apps = [
 },
 {
   name: "Ok Rummy",
-  icon: "dummy28.jpg",
+  icon: "IMG_20260830_033406_733.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -225,7 +225,7 @@ const apps = [
 },
 {
   name: "Rumble Rummy",
-  icon: "dummy29.jpg",
+  icon: "IMG_20260830_033508_380.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -233,7 +233,7 @@ const apps = [
 },
 {
   name: "Rummy91",
-  icon: "dummy30.jpg",
+  icon: "IMG_20260830_033545_577.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -241,7 +241,7 @@ const apps = [
 },
 {
   name: "Rummy Ludo",
-  icon: "dummy31.jpg",
+  icon: "IMG_20260830_033645_429.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -249,7 +249,7 @@ const apps = [
 },
 {
   name: "Rummy77",
-  icon: "dummy32.jpg",
+  icon: "IMG_20260830_033758_992.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -257,7 +257,7 @@ const apps = [
 },
 {
   name: "Saga Slots",
-  icon: "dummy33.jpg",
+  icon: "IMG_20260830_033845_881.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -265,7 +265,7 @@ const apps = [
 },
 {
   name: "Share Slots",
-  icon: "dummy34.jpg",
+  icon: "IMG_20260830_033922_154.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -273,7 +273,7 @@ const apps = [
 },
 {
   name: "Slots Spin",
-  icon: "dummy35.jpg",
+  icon: "IMG_20260830_033959_263.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -281,7 +281,7 @@ const apps = [
 },
 {
   name: "Slots Winner",
-  icon: "dummy36.jpg",
+  icon: "IMG_20260830_034046_637.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -289,7 +289,7 @@ const apps = [
 },
 {
   name: "Spin Crush",
-  icon: "dummy37.jpg",
+  icon: "IMG_20260830_034134_182.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -297,7 +297,7 @@ const apps = [
 },
 {
   name: "ABC Rummy",
-  icon: "dummy38.jpg",
+  icon: "IMG_20260830_034225_263.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -305,7 +305,7 @@ const apps = [
 },
 {
   name: "Top Rummy",
-  icon: "dummy39.jpg",
+  icon: "IMG_20260830_034259_298.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -313,7 +313,7 @@ const apps = [
 },
 {
   name: "Win Rummy",
-  icon: "dummy40.jpg",
+  icon: "IMG_20260830_034427_853.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -321,23 +321,23 @@ const apps = [
 },
 {
   name: "YN777",
-  icon: "dummy41.jpg",
+  icon: "IMG_20260830_034513_623.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
   link: "https://www.yn077.com/?code=4SWMCSQ6YTU&t=1786180375"
 },
 {
-  name: "App 42",
-  icon: "dummy42.jpg",
+  name: "Gold Rummy",
+  icon: "IMG_20260830_103521_459.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
-  link: "https://example.com/app42"
+  link: "https://goldrummy21.com/?code=JLX6BAZENGW&t=1788066269"
 },
 {
   name: "Yono Arcade",
-  icon: "dummy43.jpg",
+  icon: "IMG_20260830_034742_378.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -345,7 +345,7 @@ const apps = [
 },
 {
   name: "Yono Games",
-  icon: "dummy44.jpg",
+  icon: "IMG_20260830_034830_106.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -353,7 +353,7 @@ const apps = [
 },
 {
   name: "Yono Rummy",
-  icon: "dummy45.jpg",
+  icon: "IMG_20260830_034930_075.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -361,7 +361,7 @@ const apps = [
 },
 {
   name: "Yono Slots",
-  icon: "dummy46.jpg",
+  icon: "IMG_20260830_035054_674.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -369,7 +369,7 @@ const apps = [
 },
 {
   name: "Yono vip",
-  icon: "dummy47.jpg",
+  icon: "IMG_20260830_035150_344.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -377,7 +377,7 @@ const apps = [
 },
 {
   name: "789 Jackpot",
-  icon: "dummy48.jpg",
+  icon: "IMG_20260830_040020_480.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -385,7 +385,7 @@ const apps = [
 },
 {
   name: "App 49",
-  icon: "dummy49.jpg",
+  icon: "IMG_20260830_040058_281.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -393,7 +393,7 @@ const apps = [
 },
 {
   name: "Spin 777",
-  icon: "dummy50.jpg",
+  icon: "IMG_20260830_040126_197.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
@@ -417,7 +417,7 @@ const apps = [
 },
 {
   name: "Jaiho Rummy",
-  icon: "dummy53.jpg",
+  icon: "IMG_20260830_040152_764.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
