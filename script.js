@@ -160,7 +160,7 @@ const apps = [
   link: "https://uonoagentnew.asia/?code=F9MHXY5G49Q&t=1786173815"
 },
 {
-  name: "DhanWin",
+  name: "DhanGame",
   icon: "IMG_20260830_032813_299.jpg",
   rating: "4.5",
   version: "1.0.0",
