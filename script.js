@@ -1,19 +1,19 @@
 const apps = [
   {
-    name: "Spin Winner ",
-    icon: "IMG_20260830_015124_678.jpg",
+    name: "Boss Rummy",
+    icon: "IMG_20260830_031013_336.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
-    link: "https://sfspinwinner.com/?code=SDN9HGYEL5C&t=1786179557"
+    link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
   },
   {
-    name: "Bingo101",
-    icon: "IMG_20260830_015303_606.jpg",
+    name: "Money Rummy",
+    icon: "IMG_20260915_143453_746.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
-    link: "https://bin3go101.net/?code=6YF8QWQFC4Z&t=1786125445"
+    link: "https://moneyrummyn.com/?code=T1XQD1VKLPT&t=1788927397"
   },
   {
     name: "Joy Rummy",
@@ -24,12 +24,12 @@ const apps = [
     link: "https://www.joyrummyon.com/?code=J5K5FS3UR4F&t=1786171415"
   },
 {
-  name: "Boss Rummy",
-  icon: "IMG_20260830_031013_336.jpg",
+  name: "Spin Winner",
+  icon: "IMG_20260830_015124_678.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
-  link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
+  link: "https://sfspinwinner.com/?code=SDN9HGYEL5C&t=1786179557"
 },
 {
   name: "Club Inr",
@@ -200,12 +200,12 @@ const apps = [
   link: "https://www.maxrummy222.com/?code=QUM8SXDWU8J&t=1786176586"
 },
 {
-  name: "MBM BET",
-  icon: "IMG_20260830_033158_592.jpg",
+  name: "Bingo101",
+  icon: "IMG_20260830_015303_606.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
-  link: "https://www.mbmbet15.com/?code=UPHQ3TKH3R2&t=1786176708"
+  link: "https://bin3go101.net/?code=6YF8QWQFC4Z&t=1786125445"
 },
 {
   name: "Neta Vip",
