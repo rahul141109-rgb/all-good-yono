@@ -1,11 +1,11 @@
 const apps = [
   {
-    name: "Maha Games",
-    icon: "IMG_20260830_032111_616.jpg",
+    name: "Boss Rummy",
+    icon: "IMG_20260830_031013_336.jpg",
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
-    link: "https://z-mahagames.com/?code=J241P8ZECLT&t=1786130962"
+    link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
   },
   {
     name: "Money Rummy",
@@ -120,12 +120,12 @@ const apps = [
   link: "https://www.jaiho91agent.com/?code=C42LBXNJFEZ&t=1786130332"
 },
 {
-  name: "Boss Rummy",
-  icon: "IMG_20260830_031013_336.jpg",
+  name: "Mahagames",
+  icon: "IMG_20260830_032111_616.jpg",
   rating: "4.5",
   version: "1.0.0",
   description: "Useful Android application.",
-  link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
+  link: "https://z-mahagames.com/?code=J241P8ZECLT&t=1786130962"
 },
 {
   name: "Jaiho Spin",
