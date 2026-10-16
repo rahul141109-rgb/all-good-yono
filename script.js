@@ -1,11 +1,11 @@
 const apps = [
   {
-    name: "Bingo 101",
-    icon: "IMG_20260830_015303_606.jpg",
-    rating: "4.5",
-    version: "1.0.0",
-    description: "Useful Android application.",
-    link: "https://bin3go101.net/?code=6YF8QWQFC4Z&t=1786125445"
+    name: "Boss Rummy",
+  icon: "IMG_20260830_031013_336.jpg",
+  rating: "4.5",
+  version: "1.0.0",
+  description: "Useful Android application.",
+  link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
   },
   {
     name: "Money Rummy",
@@ -200,12 +200,12 @@ const apps = [
   link: "https://www.maxrummy222.com/?code=QUM8SXDWU8J&t=1786176586"
 },
 {
-  name: "Boss Rummy",
-  icon: "IMG_20260830_031013_336.jpg",
-  rating: "4.5",
-  version: "1.0.0",
-  description: "Useful Android application.",
-  link: "https://www.bossrummyo.com/?code=LSHNAXS6YBV&t=1786125483"
+  name: "Bingo 101",
+    icon: "IMG_20260830_015303_606.jpg",
+    rating: "4.5",
+    version: "1.0.0",
+    description: "Useful Android application.",
+    link: "https://bin3go101.net/?code=6YF8QWQFC4Z&t=1786125445"
 },
 {
   name: "Neta Vip",
