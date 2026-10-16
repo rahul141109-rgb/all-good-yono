@@ -13,7 +13,7 @@ const apps = [
     rating: "4.5",
     version: "1.0.0",
     description: "Useful Android application.",
-    link: "https://moneyrummyn.com/?code=T1XQD1VKLPT&t=1788927397"
+    link: "https://moneyrummymm.com/?code=T1XR9S5UKWW&t=1792152007"
   },
   {
     name: "Joy Rummy",
