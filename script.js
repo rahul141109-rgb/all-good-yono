@@ -459,8 +459,12 @@ function displayApps(list) {
     icon.src = app.icon || "";
     icon.alt = `${app.name || "App"} icon`;
     icon.loading = "lazy";
+    icon.onerror = () => {
+      icon.style.visibility = "hidden";
+    };
 
     const heading = document.createElement("div");
+
     const name = document.createElement("h3");
     name.className = "app-name";
     name.textContent = app.name || "Android App";
@@ -474,7 +478,7 @@ function displayApps(list) {
 
     const description = document.createElement("p");
     description.className = "app-description";
-    description.textContent = app.description || "Android application.";
+    description.textContent = app.description || "Useful Android application.";
 
     const info = document.createElement("div");
     info.className = "app-info";
@@ -490,12 +494,22 @@ function displayApps(list) {
     const buttons = document.createElement("div");
     buttons.className = "app-buttons";
 
+    if (app.link) {
+      const download = document.createElement("a");
+      download.className = "app-button download-button";
+      download.href = app.link;
+      download.target = "_blank";
+      download.rel = "noopener noreferrer";
+      download.textContent = "Download";
+      buttons.appendChild(download);
+    }
+
     const details = document.createElement("a");
     details.className = "app-button details-button";
-    details.href = "/" + encodeURIComponent(makeAppSlug(app));
+    details.href = "/?app=" + encodeURIComponent(makeAppSlug(app));
     details.textContent = "View Details";
 
-    buttons.append(details);
+    buttons.appendChild(details);
     card.append(top, description, info, buttons);
     appList.appendChild(card);
   });
@@ -511,30 +525,54 @@ function showDetailsPage(app) {
   home.hidden = true;
   page.hidden = false;
   content.replaceChildren();
+  content.className = "app-details-card";
+
+  const top = document.createElement("div");
+  top.className = "details-app-top";
 
   const icon = document.createElement("img");
-  icon.className = "app-icon";
+  icon.className = "details-app-icon";
   icon.src = app.icon || "";
   icon.alt = `${app.name || "App"} icon`;
+  icon.onerror = () => {
+    icon.style.visibility = "hidden";
+  };
 
-  const title = document.createElement("h2");
+  const heading = document.createElement("div");
+  heading.className = "details-app-heading";
+
+  const title = document.createElement("h1");
   title.textContent = app.name || "Android App";
 
+  const rating = document.createElement("p");
+  rating.className = "details-rating";
+  rating.textContent = `★ ${app.rating || "4.5"}`;
+
+  heading.append(title, rating);
+  top.append(icon, heading);
+
   const description = document.createElement("p");
-  description.textContent = app.description || "Android application.";
+  description.className = "details-description";
+  description.textContent =
+    app.description || "Useful Android application.";
 
   const version = document.createElement("p");
+  version.className = "details-version";
   version.textContent = `Version: ${app.version || "1.0.0"}`;
 
-  content.append(icon, title, description, version);
+  const platform = document.createElement("p");
+  platform.className = "details-platform";
+  platform.textContent = "Platform: Android";
+
+  content.append(top, description, version, platform);
 
   if (app.link) {
     const download = document.createElement("a");
-    download.className = "app-button download-button";
+    download.className = "app-button download-button details-download";
     download.href = app.link;
     download.target = "_blank";
     download.rel = "noopener noreferrer";
-    download.textContent = "Download";
+    download.textContent = "⬇ Download App";
     content.appendChild(download);
   }
 
@@ -547,11 +585,22 @@ function openRequestedApp() {
 
   if (!slug) return;
 
-  const app = apps.find(
+  const staticApp = apps.find(
     (item) => makeAppSlug(item) === slug.toLowerCase()
   );
 
-  if (app) showDetailsPage(app);
+  if (staticApp) {
+    showDetailsPage(staticApp);
+    return;
+  }
+
+  // Supabase apps are loaded separately.
+  const supabaseApps = window.ALL_GOOD_YONO_SUPABASE_APPS || [];
+  const supabaseApp = supabaseApps.find(
+    (item) => makeAppSlug(item) === slug.toLowerCase()
+  );
+
+  if (supabaseApp) showDetailsPage(supabaseApp);
 }
 
 if (searchInput) {
