@@ -431,84 +431,141 @@ const searchInput = document.getElementById("searchInput");
 const noResults = document.getElementById("noResults");
 const appCount = document.getElementById("appCount");
 
+function makeAppSlug(app) {
+  return String(app.name || "app")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function displayApps(list) {
+  if (!appList) return;
+
   appList.innerHTML = "";
 
-  appCount.textContent = `${list.length} APPS`;
-
-  if (list.length === 0) {
-    noResults.style.display = "block";
-    return;
-  }
-
-  noResults.style.display = "none";
+  if (appCount) appCount.textContent = `${list.length} APPS`;
+  if (noResults) noResults.style.display = list.length ? "none" : "block";
 
   list.forEach((app) => {
     const card = document.createElement("article");
     card.className = "app-card";
 
-    card.innerHTML = `
-      <div class="app-top">
-        <img
-          class="app-icon"
-          src="${app.icon}"
-          alt="${app.name} icon"
-          loading="lazy"
-        >
+    const top = document.createElement("div");
+    top.className = "app-top";
 
-        <div>
-          <h3 class="app-name">${app.name}</h3>
-          <div class="app-rating">★ ${app.rating}</div>
-        </div>
-      </div>
+    const icon = document.createElement("img");
+    icon.className = "app-icon";
+    icon.src = app.icon || "";
+    icon.alt = `${app.name || "App"} icon`;
+    icon.loading = "lazy";
 
-      <p class="app-description">
-        ${app.description}
-      </p>
+    const heading = document.createElement("div");
+    const name = document.createElement("h3");
+    name.className = "app-name";
+    name.textContent = app.name || "Android App";
 
-      <div class="app-info">
-        <span>Version ${app.version}</span>
-        <span>Android</span>
-      </div>
+    const rating = document.createElement("div");
+    rating.className = "app-rating";
+    rating.textContent = `★ ${app.rating || "4.5"}`;
 
-      <div class="app-buttons">
-        <a
-          class="app-button download-button"
-          href="${app.link}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download
-        </a>
+    heading.append(name, rating);
+    top.append(icon, heading);
 
-        <button
-          class="app-button details-button"
-          onclick="showDetails('${app.name}', '${app.description}', '${app.version}')"
-        >
-          Details
-        </button>
-      </div>
-    `;
+    const description = document.createElement("p");
+    description.className = "app-description";
+    description.textContent = app.description || "Android application.";
 
+    const info = document.createElement("div");
+    info.className = "app-info";
+
+    const version = document.createElement("span");
+    version.textContent = `Version ${app.version || "1.0.0"}`;
+
+    const platform = document.createElement("span");
+    platform.textContent = "Android";
+
+    info.append(version, platform);
+
+    const buttons = document.createElement("div");
+    buttons.className = "app-buttons";
+
+    const details = document.createElement("a");
+    details.className = "app-button details-button";
+    details.href = "/" + encodeURIComponent(makeAppSlug(app));
+    details.textContent = "View Details";
+
+    buttons.append(details);
+    card.append(top, description, info, buttons);
     appList.appendChild(card);
   });
 }
 
-function showDetails(name, description, version) {
-  alert(
-    `${name}\n\n${description}\n\nVersion: ${version}`
-  );
+function showDetailsPage(app) {
+  const home = document.getElementById("homePage");
+  const page = document.getElementById("appDetailsPage");
+  const content = document.getElementById("appDetailsContent");
+
+  if (!home || !page || !content) return;
+
+  home.hidden = true;
+  page.hidden = false;
+  content.replaceChildren();
+
+  const icon = document.createElement("img");
+  icon.className = "app-icon";
+  icon.src = app.icon || "";
+  icon.alt = `${app.name || "App"} icon`;
+
+  const title = document.createElement("h2");
+  title.textContent = app.name || "Android App";
+
+  const description = document.createElement("p");
+  description.textContent = app.description || "Android application.";
+
+  const version = document.createElement("p");
+  version.textContent = `Version: ${app.version || "1.0.0"}`;
+
+  content.append(icon, title, description, version);
+
+  if (app.link) {
+    const download = document.createElement("a");
+    download.className = "app-button download-button";
+    download.href = app.link;
+    download.target = "_blank";
+    download.rel = "noopener noreferrer";
+    download.textContent = "Download";
+    content.appendChild(download);
+  }
+
+  document.title = `${app.name || "App"} | All Good Yono`;
 }
 
-searchInput.addEventListener("input", function () {
-  const searchText = this.value.toLowerCase().trim();
+function openRequestedApp() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("app");
 
-  const filteredApps = apps.filter((app) =>
-    app.name.toLowerCase().includes(searchText) ||
-    app.description.toLowerCase().includes(searchText)
+  if (!slug) return;
+
+  const app = apps.find(
+    (item) => makeAppSlug(item) === slug.toLowerCase()
   );
 
-  displayApps(filteredApps);
-});
+  if (app) showDetailsPage(app);
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase().trim();
+
+    displayApps(
+      apps.filter((app) =>
+        String(app.name || "").toLowerCase().includes(query) ||
+        String(app.description || "").toLowerCase().includes(query)
+      )
+    );
+  });
+}
 
 displayApps(apps);
+openRequestedApp();
