@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>All Good Yono</title>
+
     <meta name="description"
           content="All Good Yono - App directory for useful Android applications.">
+
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
+
     <header class="header">
         <div class="brand">
             <a href="/" aria-label="All Good Yono home">
-                <img class="brand-logo" src="/logo.png" alt="All Good Yono Logo">
+                <img
+                    class="brand-logo"
+                    src="/logo.png"
+                    alt="All Good Yono Logo"
+                >
             </a>
+
             <div>
                 <h1>All Good Yono</h1>
                 <p>Android App Directory</p>
@@ -27,7 +37,9 @@
     </div>
 
     <main class="container">
+
         <section id="homePage">
+
             <section class="hero">
                 <p class="small-title">WELCOME TO</p>
                 <h2>ALL GOOD YONO</h2>
@@ -48,6 +60,7 @@
                     <p>EVERY APP, ORGANIZED</p>
                     <h2>THE FULL ARCHIVE</h2>
                 </div>
+
                 <span id="appCount">53 APPS</span>
             </section>
 
@@ -55,29 +68,66 @@
                 <!-- Existing apps load from script.js -->
             </section>
 
-            <div id="noResults" class="no-results" style="display:none;">
+            <div
+                id="noResults"
+                class="no-results"
+                style="display:none;"
+            >
                 <h3>No apps found</h3>
                 <p>Try searching with another name.</p>
             </div>
+
         </section>
 
         <section id="appDetailsPage" hidden>
             <p><a href="/">← Back to all apps</a></p>
+
             <div id="appDetailsContent">
                 <h2>Loading app details...</h2>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
+
         <h3>All Good Yono</h3>
+
         <p>App directory for useful Android applications.</p>
+
+        <p style="margin-top: 14px;">
+            <a
+                href="https://t.me/rashanlooter"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="
+                    display: inline-block;
+                    padding: 10px 18px;
+                    border: 1px solid #39e879;
+                    border-radius: 10px;
+                    background: #10251a;
+                    color: #39e879;
+                    font-weight: 700;
+                "
+            >
+                ✈ Join Rashan Looter on Telegram
+            </a>
+        </p>
+
+        <p style="margin-top: 12px;">
+            <strong style="color: #39e879;">
+                Powered by Rashan Loots
+            </strong>
+        </p>
+
         <p class="copyright">
             © 2026 All Good Yono. All rights reserved.
         </p>
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <script>
         // Read the app slug passed by the GitHub Pages 404 redirect.
         (function () {
@@ -96,5 +146,6 @@
 
     <script src="/script.js"></script>
     <script src="/supabase-apps.js"></script>
+
 </body>
 </html>
