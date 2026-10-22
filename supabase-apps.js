@@ -43,21 +43,20 @@ async function loadSupabaseApps() {
     slug: supabaseAppSlug(item)
   }));
 
-  // Store apps so the details page can find them.
   window.ALL_GOOD_YONO_SUPABASE_APPS = supabaseApps;
 
-  function createElement(tag, className, text) {
-    const element = document.createElement(tag);
-    if (className) element.className = className;
-    if (text !== undefined) element.textContent = text;
-    return element;
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
   }
 
-  function createDetailsUrl(app) {
+  function detailsUrl(app) {
     return "/?app=" + encodeURIComponent(app.slug);
   }
 
-  function showSupabaseDetails(app) {
+  function showSupabaseDetails(app, updateUrl = true) {
     const home = document.getElementById("homePage");
     const page = document.getElementById("appDetailsPage");
     const content = document.getElementById("appDetailsContent");
@@ -67,33 +66,48 @@ async function loadSupabaseApps() {
     home.hidden = true;
     page.hidden = false;
     content.replaceChildren();
+    content.className = "app-details-card";
 
-    if (app.icon) {
-      const img = createElement("img", "app-icon");
-      img.src = app.icon;
-      img.alt = app.name + " icon";
-      img.onerror = () => {
-        img.style.display = "none";
-      };
-      content.appendChild(img);
-    }
+    const top = el("div", "details-app-top");
+    const icon = el("img", "details-app-icon");
+    icon.src = app.icon || "";
+    icon.alt = app.name + " icon";
+    icon.onerror = () => {
+      icon.style.visibility = "hidden";
+    };
 
-    content.appendChild(createElement("h2", "", app.name));
-    content.appendChild(
-      createElement("p", "", app.description)
+    const heading = el("div", "details-app-heading");
+    const title = el("h1", "", app.name);
+    const rating = el("p", "details-rating", "★ " + app.rating);
+
+    heading.append(title, rating);
+    top.append(icon, heading);
+
+    const description = el(
+      "p",
+      "details-description",
+      app.description
     );
-    content.appendChild(
-      createElement("p", "", "Version: " + app.version)
+
+    const version = el(
+      "p",
+      "details-version",
+      "Version: " + app.version
     );
-    content.appendChild(
-      createElement("p", "", "Platform: Android")
+
+    const platform = el(
+      "p",
+      "details-platform",
+      "Platform: Android"
     );
+
+    content.append(top, description, version, platform);
 
     if (app.link) {
-      const download = createElement(
+      const download = el(
         "a",
-        "app-button download-button",
-        "Download"
+        "app-button download-button details-download",
+        "⬇ Download App"
       );
       download.href = app.link;
       download.target = "_blank";
@@ -102,10 +116,12 @@ async function loadSupabaseApps() {
     }
 
     document.title = app.name + " | All Good Yono";
-    history.replaceState({}, "", createDetailsUrl(app));
+
+    if (updateUrl) {
+      history.pushState({}, "", detailsUrl(app));
+    }
   }
 
-  // Add Supabase cards without duplicating them.
   const existingIds = new Set(
     Array.from(
       appList.querySelectorAll("[data-supabase-app-id]")
@@ -115,46 +131,46 @@ async function loadSupabaseApps() {
   supabaseApps.forEach((app) => {
     if (existingIds.has(String(app.id))) return;
 
-    const card = createElement("article", "app-card");
+    const card = el("article", "app-card");
     card.dataset.supabaseAppId = String(app.id);
     card.dataset.appSlug = app.slug;
 
-    const top = createElement("div", "app-top");
+    const top = el("div", "app-top");
 
     if (app.icon) {
-      const img = createElement("img", "app-icon");
+      const img = el("img", "app-icon");
       img.src = app.icon;
       img.alt = app.name + " icon";
       img.loading = "lazy";
       img.onerror = () => {
-        img.style.display = "none";
+        img.style.visibility = "hidden";
       };
       top.appendChild(img);
     }
 
-    const info = createElement("div");
-    info.appendChild(createElement("h3", "app-name", app.name));
-    info.appendChild(createElement("div", "app-rating", "★ " + app.rating));
+    const info = el("div");
+    info.append(
+      el("h3", "app-name", app.name),
+      el("div", "app-rating", "★ " + app.rating)
+    );
     top.appendChild(info);
 
-    const description = createElement(
+    const description = el(
       "p",
       "app-description",
       app.description
     );
 
-    const appInfo = createElement("div", "app-info");
-    appInfo.appendChild(
-      createElement("span", "", "Version " + app.version)
-    );
-    appInfo.appendChild(
-      createElement("span", "", "Android")
+    const appInfo = el("div", "app-info");
+    appInfo.append(
+      el("span", "", "Version " + app.version),
+      el("span", "", "Android")
     );
 
-    const buttons = createElement("div", "app-buttons");
+    const buttons = el("div", "app-buttons");
 
     if (app.link) {
-      const download = createElement(
+      const download = el(
         "a",
         "app-button download-button",
         "Download"
@@ -165,18 +181,19 @@ async function loadSupabaseApps() {
       buttons.appendChild(download);
     }
 
-    const details = createElement(
+    const details = el(
       "a",
       "app-button details-button",
       "View Details"
     );
-    details.href = createDetailsUrl(app);
+    details.href = detailsUrl(app);
+
     details.addEventListener("click", (event) => {
       event.preventDefault();
       showSupabaseDetails(app);
     });
-    buttons.appendChild(details);
 
+    buttons.appendChild(details);
     card.append(top, description, appInfo, buttons);
     appList.appendChild(card);
   });
@@ -185,20 +202,20 @@ async function loadSupabaseApps() {
     const cards = Array.from(
       appList.querySelectorAll(".app-card")
     );
-    const visibleCards = cards.filter(
+
+    const visible = cards.filter(
       (card) => card.style.display !== "none"
     );
 
     if (appCount) {
-      appCount.textContent = visibleCards.length + " APPS";
+      appCount.textContent = visible.length + " APPS";
     }
 
     if (noResults) {
-      noResults.style.display = visibleCards.length ? "none" : "block";
+      noResults.style.display = visible.length ? "none" : "block";
     }
   }
 
-  // Filter all cards, including hardcoded and Supabase apps.
   function filterApps() {
     const query = (searchInput?.value || "").toLowerCase().trim();
 
@@ -218,7 +235,6 @@ async function loadSupabaseApps() {
 
   filterApps();
 
-  // Open a Supabase app when its URL is requested.
   const requestedSlug = new URLSearchParams(
     window.location.search
   ).get("app");
@@ -229,7 +245,7 @@ async function loadSupabaseApps() {
     );
 
     if (requestedApp) {
-      showSupabaseDetails(requestedApp);
+      showSupabaseDetails(requestedApp, false);
     }
   }
 }
