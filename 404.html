@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Good Yono</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var params = new URLSearchParams(window.location.search);
+      var redirect = params.get("redirect");
+
+      if (redirect) {
+        window.location.replace(redirect);
+        return;
+      }
+
+      var slug = path.replace(/^\/+|\/+$/g, "");
+
+      if (slug && slug !== "all-good-yono") {
+        window.location.replace(
+          "/?app=" + encodeURIComponent(slug)
+        );
+      } else {
+        window.location.replace("/");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Opening All Good Yono...</p>
+</body>
+</html>
