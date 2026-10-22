@@ -6,12 +6,14 @@
     <title>All Good Yono</title>
     <meta name="description"
           content="All Good Yono - App directory for useful Android applications.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header class="header">
         <div class="brand">
-            <img class="brand-logo" src="logo.png" alt="All Good Yono Logo">
+            <a href="/" aria-label="All Good Yono home">
+                <img class="brand-logo" src="/logo.png" alt="All Good Yono Logo">
+            </a>
             <div>
                 <h1>All Good Yono</h1>
                 <p>Android App Directory</p>
@@ -25,37 +27,46 @@
     </div>
 
     <main class="container">
-        <section class="hero">
-            <p class="small-title">WELCOME TO</p>
-            <h2>ALL GOOD YONO</h2>
-            <p>Discover useful Android applications in one place.</p>
-        </section>
+        <section id="homePage">
+            <section class="hero">
+                <p class="small-title">WELCOME TO</p>
+                <h2>ALL GOOD YONO</h2>
+                <p>Discover useful Android applications in one place.</p>
+            </section>
 
-        <section class="search-section">
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Search apps..."
-                autocomplete="off"
-            >
-        </section>
+            <section class="search-section">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search apps..."
+                    autocomplete="off"
+                >
+            </section>
 
-        <section class="archive-heading">
-            <div>
-                <p>EVERY APP, ORGANIZED</p>
-                <h2>THE FULL ARCHIVE</h2>
+            <section class="archive-heading">
+                <div>
+                    <p>EVERY APP, ORGANIZED</p>
+                    <h2>THE FULL ARCHIVE</h2>
+                </div>
+                <span id="appCount">53 APPS</span>
+            </section>
+
+            <section id="appList" class="app-list">
+                <!-- Existing apps load from script.js -->
+            </section>
+
+            <div id="noResults" class="no-results" style="display:none;">
+                <h3>No apps found</h3>
+                <p>Try searching with another name.</p>
             </div>
-            <span id="appCount">53 APPS</span>
         </section>
 
-        <section id="appList" class="app-list">
-            <!-- Existing apps load from script.js -->
+        <section id="appDetailsPage" hidden>
+            <p><a href="/">← Back to all apps</a></p>
+            <div id="appDetailsContent">
+                <h2>Loading app details...</h2>
+            </div>
         </section>
-
-        <div id="noResults" class="no-results" style="display:none;">
-            <h3>No apps found</h3>
-            <p>Try searching with another name.</p>
-        </div>
     </main>
 
     <footer class="footer">
@@ -66,13 +77,24 @@
         </p>
     </footer>
 
-    <!-- Load Supabase first -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        // Read the app slug passed by the GitHub Pages 404 redirect.
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get("app");
 
-    <!-- Existing app list -->
-    <script src="script.js"></script>
+            if (!slug) return;
 
-    <!-- Apps added through Supabase -->
-    <script src="supabase-apps.js"></script>
+            document.getElementById("homePage").hidden = true;
+            document.getElementById("appDetailsPage").hidden = false;
+
+            window.ALL_GOOD_YONO_APP_SLUG = slug;
+            document.title = "App Details | All Good Yono";
+        })();
+    </script>
+
+    <script src="/script.js"></script>
+    <script src="/supabase-apps.js"></script>
 </body>
 </html>
